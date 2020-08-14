@@ -4,4 +4,6 @@ services:
     - docker
 before_install:
     docker build -t yshoang/docker-react -f Dockerfile.dev .
+script:
+    docker run yshoang/docker-react npm run test -- -- coverage
      
